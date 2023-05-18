@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #667eea, #764ba2);
+}
+
+/* Card Styles */
+.card {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+}
+
+/* HTML Card Styles */
+.card-html {
+    background: linear-gradient(to bottom right, #89f7fe, #66a6ff);
+}
+
+/* CSS Card Styles */
+.card-css {
+    background: linear-gradient(to bottom right, #f9d423, #ff4e50);
+}
+
+/* JavaScript Card Styles */
+.card-js {
+    background: linear-gradient(to bottom right, #23a6d5, #ff8e53);
+}
+
+/* Design Card Styles */
+.card-design {
+    background: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
+}
+
+/* Content Styles */
+.card-content {
+    padding: 20px;
+    color: white;
+}
+
+.card-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Icon Styles */
+.card-content i {
+    margin-right: 8px;
+}
+
+/* Animation Styles */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Shadow Animation Styles */
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.15) 10%, rgba(0,0,0,0.5) 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Mouse Trail Styles */
+.mouse-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+}
+
+.mouse-trail span {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: center;
+    animation: mouseTrail 1s infinite;
+}
+
+@keyframes mouseTrail {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
